@@ -16,6 +16,7 @@ fn main(){
     for i in 1..33 {
         ipv6 += ipv6_chars[gen(0, 15)];
         if i % 4 == 0 && i != 32 { ipv6 += ":"; }
+        // ^ On every fourth, add : except on 32nd.
     }
 
     println!("{}\n{}", ipv4, ipv6);
